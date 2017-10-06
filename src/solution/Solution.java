@@ -9,5 +9,6 @@ public interface Solution {
     int multiplesTWO(int num);
     BigInteger evenFibonacciNumbers(BigInteger num);
     int[] largestPrimeFactor(long num);
+    int largestPalindrome(int num1, int num2);
 
 }

@@ -88,4 +88,34 @@ public class MySolution implements Solution {
         return resultList.stream().mapToInt(i->i).toArray();
     }
 
+    @Override
+    public int largestPalindrome(int num1, int num2) {
+        int max = 0;
+        for (int i = num1; i >= num1/2; i--) {
+            for (int j = num2; j >= num2/2; j--) {
+                int isPali = i*j;
+                if (isPalindrome(isPali)) {
+                    if (max < isPali) {
+                        max = isPali;
+                    }
+                }
+            }
+        }
+        return max;
+    }
+
+    private boolean isPalindrome(int checkPali) {
+        char[] numArr = (Integer.toString(checkPali)).toCharArray();
+        int begin = 0;
+        int end = numArr.length - 1;
+        while (end > begin) {
+            if (numArr[begin] != numArr[end]) {
+                return false;
+            }
+            begin++;
+            end--;
+        }
+        return true;
+    }
+
 }

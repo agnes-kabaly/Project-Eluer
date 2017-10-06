@@ -46,4 +46,12 @@ public class SolutionTest {
         assertArrayEquals(new int[]{71, 839, 1471, 6857}, solution.largestPrimeFactor(600851475143L));
     }
 
+    @Test
+    public void largestPalindrome() throws Exception {
+        assertEquals(9009, solution.largestPalindrome(99, 99));
+        assertEquals(698896, solution.largestPalindrome(850, 850));
+        assertEquals(289982, solution.largestPalindrome(540, 550));
+        assertEquals(906609, solution.largestPalindrome(999, 999));
+    }
+
 }

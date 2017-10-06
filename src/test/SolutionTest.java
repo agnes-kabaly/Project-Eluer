@@ -63,6 +63,7 @@ public class SolutionTest {
     @Test
     public void sumSquareDifference() throws Exception {
         assertEquals(2640, solution.sumSquareDifference(10));
+        assertEquals(25164150, solution.sumSquareDifference(100));
     }
 
 }

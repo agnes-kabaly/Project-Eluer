@@ -133,7 +133,8 @@ public class MySolution implements Solution {
 
     @Override
     public int sumSquareDifference(int num) {
-        return squareOfSum(10) - sumSquares(10);
+        System.out.println(squareOfSum(num) - sumSquares(num));
+        return squareOfSum(num) - sumSquares(num);
     }
 
     public int sumSquares(int num) {

@@ -1,5 +1,9 @@
 package solution;
 
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MySolution implements Solution {
 
     @Override
@@ -54,5 +58,34 @@ public class MySolution implements Solution {
         return sumMulti;
     }
 
+    @Override
+    public BigInteger evenFibonacciNumbers(BigInteger num) {
+        BigInteger sumBigInt = BigInteger.valueOf(2);
+        BigInteger tempBig1 = BigInteger.valueOf(1);
+        BigInteger tempBig2 = BigInteger.valueOf(2);
+        BigInteger nextFiboBig = BigInteger.valueOf(0);
+
+        while (nextFiboBig.compareTo(num) < 0) {
+            nextFiboBig = tempBig1.add(tempBig2);
+            if ((nextFiboBig).mod(BigInteger.valueOf(2)).equals(BigInteger.valueOf(0))) {
+                sumBigInt = sumBigInt.add(nextFiboBig);
+            }
+            tempBig1 = tempBig2;
+            tempBig2 = nextFiboBig;
+        }
+        return sumBigInt;
+    }
+
+    @Override
+    public int[] largestPrimeFactor(long num) {
+        List<Integer> resultList = new ArrayList<>();
+        for (int i=2; i <= num; i++) {
+            if (num % i == 0) {
+                resultList.add(i);
+                num = num / i;
+            }
+        }
+        return resultList.stream().mapToInt(i->i).toArray();
+    }
 
 }

@@ -118,4 +118,38 @@ public class MySolution implements Solution {
         return true;
     }
 
+    // I have to optimize this...
+    @Override
+    public int smallestMultiple(int num) {
+        int result = num;
+        for (int i = 2; i < num+1; i++) {
+            if (result%i != 0) {
+                i = 0;
+                result++;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public int sumSquareDifference(int num) {
+        return squareOfSum(10) - sumSquares(10);
+    }
+
+    public int sumSquares(int num) {
+        int sum = 0;
+        for (int i=1; i < num+1; i++) {
+            sum += i*i;
+        }
+        return sum;
+    }
+
+    public int squareOfSum(int num) {
+        int sum = 0;
+        for (int i=1; i < num+1; i++) {
+            sum += i;
+        }
+        return sum * sum;
+    }
+
 }

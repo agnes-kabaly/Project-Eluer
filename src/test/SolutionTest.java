@@ -54,4 +54,15 @@ public class SolutionTest {
         assertEquals(906609, solution.largestPalindrome(999, 999));
     }
 
+    @Test
+    public void smallestMultiple() throws Exception {
+        assertEquals(2520, solution.smallestMultiple(10));
+        assertEquals(232792560, solution.smallestMultiple(20));
+    }
+
+    @Test
+    public void sumSquareDifference() throws Exception {
+        assertEquals(2640, solution.sumSquareDifference(10));
+    }
+
 }

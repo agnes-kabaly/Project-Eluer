@@ -122,7 +122,7 @@ public class MySolution implements Solution {
     @Override
     public int smallestMultiple(int num) {
         int result = num;
-        for (int i = 2; i < num+1; i++) {
+        for (int i = 2; i <= num; i++) {
             if (result%i != 0) {
                 i = 0;
                 result++;
@@ -133,13 +133,12 @@ public class MySolution implements Solution {
 
     @Override
     public int sumSquareDifference(int num) {
-        System.out.println(squareOfSum(num) - sumSquares(num));
         return squareOfSum(num) - sumSquares(num);
     }
 
     public int sumSquares(int num) {
         int sum = 0;
-        for (int i=1; i < num+1; i++) {
+        for (int i=1; i <= num; i++) {
             sum += i*i;
         }
         return sum;
@@ -147,10 +146,16 @@ public class MySolution implements Solution {
 
     public int squareOfSum(int num) {
         int sum = 0;
-        for (int i=1; i < num+1; i++) {
+        for (int i=1; i <= num; i++) {
             sum += i;
         }
         return sum * sum;
+    }
+
+    @Override
+    public int prime10001st(int num) {
+
+        return 0;
     }
 
 }

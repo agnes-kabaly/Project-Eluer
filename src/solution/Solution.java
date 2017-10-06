@@ -12,5 +12,6 @@ public interface Solution {
     int largestPalindrome(int num1, int num2);
     int smallestMultiple(int num);
     int sumSquareDifference(int num);
+    int  prime10001st(int num);
 
 }

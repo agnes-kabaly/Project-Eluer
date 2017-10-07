@@ -154,8 +154,24 @@ public class MySolution implements Solution {
 
     @Override
     public int prime10001st(int num) {
+        int primeCounter = 0;
+        int i = 2;
+        while (primeCounter < num) {
+            if (isPrime(i)) {
+                primeCounter++;
+            }
+            i++;
+        }
+        return --i;
+    }
 
-        return 0;
+    public boolean isPrime(int num) {
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

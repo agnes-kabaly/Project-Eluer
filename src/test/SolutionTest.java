@@ -69,6 +69,7 @@ public class SolutionTest {
     @Test
     public void prime10001st() throws Exception {
         assertEquals(13, solution.prime10001st(6));
+        assertEquals(104743, solution.prime10001st(10001));
     }
 
 }

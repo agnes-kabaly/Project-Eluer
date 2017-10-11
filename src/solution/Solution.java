@@ -14,5 +14,5 @@ public interface Solution {
     int sumSquareDifference(int num);
     int prime10001st(int num);
     long largestProductSeries(int num);
-    int[] specialPythagoreanTriplet(int num);
+    int specialPythagoreanTriplet(int num);
 }

@@ -228,8 +228,26 @@ public class MySolution implements Solution {
     }
 
     @Override
-    public int[] specialPythagoreanTriplet(int num) {
-        return new int[0];
+    public int specialPythagoreanTriplet(int num) {
+        int a;
+        int b;
+        int c;
+        int[] resultArr = new int[3];
+        int result = 0;
+        for (a = 0; a < num; a++) {
+            for (b = a+1; b < num; b++) {
+               for (c = b+1; c < num; c++) {
+                   if (c==num-a-b && a*a+b*b==c*c) {
+                       resultArr[0] = a;
+                       resultArr[1] = b;
+                       resultArr[2] = c;
+                       result = a*b*c;
+                       return result;
+                   }
+               }
+            }
+        }
+        return result;
     }
 
 }

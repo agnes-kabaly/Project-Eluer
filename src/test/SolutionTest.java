@@ -83,7 +83,7 @@ public class SolutionTest {
 
     @Test
     public void specialPythagoreanTriplet() throws Exception {
-        assertEquals(new int[]{200, 375, 425}, solution.specialPythagoreanTriplet(1000));
+        assertEquals(31875000, solution.specialPythagoreanTriplet(1000));
     }
 
 }

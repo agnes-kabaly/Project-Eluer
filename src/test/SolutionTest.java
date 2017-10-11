@@ -69,7 +69,16 @@ public class SolutionTest {
     @Test
     public void prime10001st() throws Exception {
         assertEquals(13, solution.prime10001st(6));
-        assertEquals(104743, solution.prime10001st(10001));
+        //assertEquals(104743, solution.prime10001st(10001));
+    }
+
+    @Test
+    public void largestProductSeries() throws Exception {
+        assertEquals(5832, solution.largestProductSeries(4));
+        assertEquals(23514624000L, solution.largestProductSeries(13));
+        assertEquals(9, solution.largestProductSeries(1));
+        assertEquals(81, solution.largestProductSeries(2));
+        assertEquals(648, solution.largestProductSeries(3));
     }
 
 }

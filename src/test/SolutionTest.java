@@ -81,4 +81,9 @@ public class SolutionTest {
         assertEquals(648, solution.largestProductSeries(3));
     }
 
+    @Test
+    public void specialPythagoreanTriplet() throws Exception {
+        assertEquals(new int[]{3, 4}, solution.specialPythagoreanTriplet(25));
+    }
+
 }

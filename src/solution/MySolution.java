@@ -211,9 +211,7 @@ public class MySolution implements Solution {
         String newMax = "";
         for (int j = 0; j < numArray.length-num; j++ ){
             for (int i=j; i<num+j; i++) {
-                if (newMax.length() == 0 && numArray[i] == 0) {
-                    newMax = "";
-                } else if (newMax.length() == num) {
+                if (newMax.length() == num) {
                     long valueOfNew = 1;
                     for (char c : newMax.toCharArray()) {
                         valueOfNew = Integer.parseInt(String.valueOf(c))*valueOfNew;
@@ -226,7 +224,12 @@ public class MySolution implements Solution {
                 newMax += String.valueOf(numArray[i]);
             }
         }
-        System.out.println("m val:" + maxNumValue);
         return maxNumValue;
     }
+
+    @Override
+    public int[] specialPythagoreanTriplet(int num) {
+        return new int[0];
+    }
+
 }

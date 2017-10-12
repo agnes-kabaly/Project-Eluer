@@ -250,4 +250,24 @@ public class MySolution implements Solution {
         return result;
     }
 
+    @Override
+    public long summationPrimes(int num) {
+        long sum = 2;
+        for (int i = 2; i < num; i++) {
+            if (isPrimeTwo(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    private boolean isPrimeTwo(int num) {
+        for (int i = 2; i < Math.sqrt(num)+1; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

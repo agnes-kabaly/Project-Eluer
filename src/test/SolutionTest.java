@@ -86,4 +86,10 @@ public class SolutionTest {
         assertEquals(31875000, solution.specialPythagoreanTriplet(1000));
     }
 
+    @Test
+    public void summationPrimes() throws Exception {
+        assertEquals(17, solution.summationPrimes(10));
+        assertEquals(142913828922L, solution.summationPrimes(2000000));
+    }
+
 }

@@ -15,4 +15,6 @@ public interface Solution {
     int prime10001st(int num);
     long largestProductSeries(int num);
     int specialPythagoreanTriplet(int num);
+    long summationPrimes(int num);
+
 }

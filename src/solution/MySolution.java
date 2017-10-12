@@ -152,10 +152,9 @@ public class MySolution implements Solution {
         return sum * sum;
     }
 
-    // I have to optimize this...
     @Override
     public int prime10001st(int num) {
-        int primeCounter = 0;
+        int primeCounter = 1;
         int i = 2;
         while (primeCounter < num) {
             if (isPrime(i)) {
@@ -167,7 +166,7 @@ public class MySolution implements Solution {
     }
 
     private boolean isPrime(int num) {
-        for (int i = 2; i < num; i++) {
+        for (int i = 2; i < Math.sqrt(num)+1; i++) {
             if (num % i == 0) {
                 return false;
             }
@@ -210,7 +209,7 @@ public class MySolution implements Solution {
 
         String newMax = "";
         for (int j = 0; j < numArray.length-num; j++ ){
-            for (int i=j; i<num+j; i++) {
+            for (int i=j; i< num+j; i++) {
                 if (newMax.length() == num) {
                     long valueOfNew = 1;
                     for (char c : newMax.toCharArray()) {
@@ -232,16 +231,12 @@ public class MySolution implements Solution {
         int a;
         int b;
         int c;
-        int[] resultArr = new int[3];
         int result = 0;
         for (a = 0; a < num; a++) {
-            for (b = a+1; b < num; b++) {
-               for (c = b+1; c < num; c++) {
-                   if (c==num-a-b && a*a+b*b==c*c) {
-                       resultArr[0] = a;
-                       resultArr[1] = b;
-                       resultArr[2] = c;
-                       result = a*b*c;
+            for (b = a + 1; b < num; b++) {
+               for (c = b + 1; c < num; c++) {
+                   if (c == num - a - b && a * a + b * b == c * c) {
+                       result = a * b * c;
                        return result;
                    }
                }

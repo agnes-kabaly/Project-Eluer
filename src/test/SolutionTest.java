@@ -92,4 +92,9 @@ public class SolutionTest {
         assertEquals(142913828922L, solution.summationPrimes(2000000));
     }
 
+    @Test
+    public void largestProductGrid() throws Exception {
+        assertEquals(1, solution.largestProductGrid(new int[20][20]));
+    }
+
 }

@@ -16,5 +16,6 @@ public interface Solution {
     long largestProductSeries(int num);
     int specialPythagoreanTriplet(int num);
     long summationPrimes(int num);
+    int largestProductGrid(int[][] grid);
 
 }

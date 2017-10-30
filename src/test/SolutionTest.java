@@ -94,7 +94,7 @@ public class SolutionTest {
 
     @Test
     public void largestProductGrid() throws Exception {
-        assertEquals(1, solution.largestProductGrid(new int[20][20]));
+        assertEquals(70600674, solution.largestProductGrid(new int[20][20]));
     }
 
 }

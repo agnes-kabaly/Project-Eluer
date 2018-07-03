@@ -202,11 +202,7 @@ public class MySolution implements Solution {
             numArray[i] = Integer.parseInt(String.valueOf(charArr[i]));
         }
 
-        long maxNumValue = 1;
-        for (int i = 0; i < num; i++) {
-            maxNumValue = maxNumValue * numArray[i];
-        }
-
+        long maxNumValue = 0;
         String newMax = "";
         for (int j = 0; j < numArray.length - num; j++) {
             for (int i = j; i < num + j; i++) {

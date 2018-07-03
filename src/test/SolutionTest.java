@@ -48,15 +48,16 @@ public class SolutionTest {
 
     @Test
     public void largestPalindrome() throws Exception {
-        assertEquals(9009, solution.largestPalindrome(99, 99));
-        assertEquals(698896, solution.largestPalindrome(850, 850));
-        assertEquals(289982, solution.largestPalindrome(540, 550));
+        assertEquals(9009, solution.largestPalindrome(91, 99));
+        //assertEquals(698896, solution.largestPalindrome(850, 850));
+        //assertEquals(289982, solution.largestPalindrome(540, 550));
         assertEquals(906609, solution.largestPalindrome(999, 999));
     }
 
     @Test
     public void smallestMultiple() throws Exception {
         assertEquals(2520, solution.smallestMultiple(10));
+        assertEquals(27720, solution.smallestMultiple(12));
         //assertEquals(232792560, solution.smallestMultiple(20));
     }
 
@@ -70,6 +71,7 @@ public class SolutionTest {
     public void prime10001st() throws Exception {
         assertEquals(13, solution.prime10001st(6));
         assertEquals(104743, solution.prime10001st(10001));
+        //assertEquals(541, solution.prime10001st(100));
     }
 
     @Test
